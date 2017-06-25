@@ -1,0 +1,17 @@
+@each $palette-color-prefix, $palette-color-variables in get-background-colors-palette($text-inputs-background-colors-support-extra-colors-palette, $text-inputs-background-colors-support-skip-colors-palette) {
+    .#{$background-colors-class-prefix}-#{$palette-color-prefix} {
+        @include text-inputs-style() {
+            border-color: map_get($palette-color-variables, map_get($text-inputs-background-colors-support-parser, border-color));
+            background: map_get($palette-color-variables, map_get($text-inputs-background-colors-support-parser, background));
+            color: map_get($palette-color-variables, map_get($text-inputs-background-colors-support-parser, color));
+
+            &:focus {
+                border-color: map_get($palette-color-variables, map_get($text-inputs-background-colors-support-parser, focus-border-color));
+            }
+        }
+
+        datalist {
+            border-color: map_get($palette-color-variables, map_get($text-inputs-datalist-background-colors-support-parser, border-color));
+        }
+    }
+}
