@@ -1,13 +1,27 @@
 $text-inputs-background-colors-support-parser: (
     border-color: 'background-inner-color',
+    focus-border-color: 'background-inner-color',
     background: 'background-inner-color',
+    focus-background: null,
     color: 'color',
-    focus-border-color: 'background-inner-color'
+    focus-color: null
 ) !default;
 
 $text-inputs-background-colors-support-extra-colors-palette: () !default;
 $text-inputs-background-colors-support-skip-colors-palette: null !default;
 
+$text-inputs-disabled-background-colors-support-parser: (
+    border-color: null,
+    background: null,
+    color: null,
+) !default;
+
+//Placeholder
+$text-inputs-placeholder-background-colors-support-parser: (
+    color: null
+);
+
+//Datalist
 $text-inputs-datalist-background-colors-support-parser: (
     border-color: 'background-inner-color'
 );
