@@ -1,14 +1,6 @@
 @each $palette-color-prefix, $palette-color-variables in get-background-colors-palette($text-inputs-background-colors-support-extra-colors-palette, $text-inputs-background-colors-support-skip-colors-palette) {
     .#{$background-colors-class-prefix}-#{$palette-color-prefix} {
-        @include text-inputs-style() {
-            @include include-text-inputs-colors(parse-map($text-inputs-background-colors-support-parser, $palette-color-variables));
-            @include include-placeholder-color(parse-map($text-inputs-placeholder-background-colors-support-parser, $palette-color-variables));
-        }
-
-        @include text-inputs-disabled-style() {
-            @include include-text-inputs-colors(parse-map($text-inputs-disabled-background-colors-support-parser, $palette-color-variables));
-        }
-
+        @include text-inputs-colors(parse-map($text-inputs-background-colors-support-parser, $palette-color-variables));
         @include datalist-colors(parse-map($text-inputs-datalist-background-colors-support-parser, $palette-color-variables));
     }
 }
